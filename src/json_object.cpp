@@ -24,6 +24,11 @@ json::object::object(std::initializer_list<raw_object::value_type> init_list)
     }
 }
 
+bool json::object::exist(const std::string& key) const
+{
+    return _object_data.find(key) != _object_data.cend();
+}
+
 const json::value& json::object::at(const std::string& key) const
 {
     return _object_data.at(key);
