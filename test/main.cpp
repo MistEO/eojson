@@ -2,6 +2,7 @@
 
 #include "include_test.h"
 #include "json5_test.h"
+#include "location_test.h"
 #include "serializing_test.h"
 
 int main()
@@ -22,6 +23,9 @@ int main()
 
     std::cout << "\n*** json5_test ***\n" << std::endl;
     success &= test_json5();
+
+    std::cout << "\n*** location_test ***\n" << std::endl;
+    success &= location_test();
 
     if (!success) {
         std::cout << "\n****** Test failed ******\n" << std::endl;
